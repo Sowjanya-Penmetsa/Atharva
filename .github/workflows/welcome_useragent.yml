@@ -18,7 +18,7 @@ permissions:
   contents: read
 
 jobs:
-  build:
+   build:
     runs-on: ubuntu-latest
 
     steps:
@@ -103,11 +103,7 @@ jobs:
           app-name: ${{env.AZURE_WEBAPP_NAME}}
           images: ${{env.REGISTRY}}/${{ github.repository }}/${{env.DOCKER_IMAGE_NAME}}:${{ github.sha }}
 
-
-
-
-
-
       - name: Azure logout
         run: |
         az logout
+
