@@ -86,12 +86,11 @@ jobs:
       - name: "Login via Azure CLI"
         uses: azure/login@v1
         with:
-          creds:
-              ${{secrets.AZURE_CLIENT_ID}}
-              ${{secrets.AZURE_CLIENT_SECRET}}
-              ${{secrets.AZURE_SUBSCRIPTION_ID}}
-              ${{secrets.AZURE_TENANT_ID}}
-      
+          ARM_CLIENT_ID: ${{secrets.AZURE_CLIENT_ID}}
+          ARM_CLIENT_SECRET: ${{secrets.AZURE_CLIENT_SECRET}}
+          ARM_SUBSCRIPTION_ID: ${{secrets.AZURE_SUBSCRIPTION_ID}}
+          ARM_TENANT_ID: ${{secrets.AZURE_TENANT_ID}}
+          
       - name: Log in to the Container registry
         uses: docker/login-action@f054a8b539a109f9f41c372932f1ae047eff08c9
         with:
