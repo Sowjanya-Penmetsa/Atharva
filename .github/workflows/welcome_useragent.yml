@@ -10,10 +10,13 @@ on:
 env:
   REGISTRY: ghcr.io
   IMAGE_NAME: ${{ github.repository }}
-  ARM_CLIENT_ID: ${{secrets.AZURE_CLIENT_ID}}
-  ARM_CLIENT_SECRET: ${{secrets.AZURE_CLIENT_SECRET}}
-  ARM_SUBSCRIPTION_ID: ${{secrets.AZURE_SUBSCRIPTION_ID}}
-  ARM_TENANT_ID: ${{secrets.AZURE_TENANT_ID}}
+  AZURE_WEBAPP_NAME: ${{secrets.AZURE_WEB_APP}}
+  DOCKER_IMAGE_NAME: ${{secrets.DOCKER_IMAGE_NAME}}
+  AZURE_CREDENTIALS: ${{secrets.AZURE_CREDENTIALS}}
+  #ARM_CLIENT_ID: ${{secrets.AZURE_CLIENT_ID}}
+  #ARM_CLIENT_SECRET: ${{secrets.AZURE_CLIENT_SECRET}}
+  #ARM_SUBSCRIPTION_ID: ${{secrets.AZURE_SUBSCRIPTION_ID}}
+  #ARM_TENANT_ID: ${{secrets.AZURE_TENANT_ID}}
 
 permissions:
   contents: read
@@ -86,10 +89,8 @@ jobs:
       - name: "Login via Azure CLI"
         uses: azure/login@v1
         with:
-          client-id: ${{env.ARM_CLIENT_ID}}
-          client-secret: ${{env.ARM_CLIENT_SECRET}}
-          subscription-id: ${{env.ARM_SUBSCRIPTION_ID}}
-          tenant-id: ${{env.ARM_TENANT_ID}}
+          creds:
+              ${{env.AZURE_CREDENTIALS}
           
       - name: Log in to the Container registry
         uses: docker/login-action@f054a8b539a109f9f41c372932f1ae047eff08c9
