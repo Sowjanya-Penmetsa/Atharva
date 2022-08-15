@@ -76,7 +76,7 @@ jobs:
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
             
-  Deploy to Web_app in Azure:
+  Deploy-to-Web-app-in-Azure:
     needs: build-and-push-dockerimage-to-github-packages
     runs-on: ubuntu-latest
     
