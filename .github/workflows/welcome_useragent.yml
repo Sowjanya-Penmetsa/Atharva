@@ -104,7 +104,7 @@ jobs:
         with:
           app-name: ${{env.AZURE_WEBAPP_NAME}}
           #images: ${{env.REGISTRY}}/${{ github.repository }}/${{env.DOCKER_IMAGE_NAME}}:${{ github.sha }}
-          images: ${{env.REGISTRY}}/${{ github.repository }}:${{ github.sha }}
+          images: ${{env.REGISTRY}}/sowjanya-penmetsa/Atharva:${{ github.sha }}
 
       - name: Azure logout
         run: |
