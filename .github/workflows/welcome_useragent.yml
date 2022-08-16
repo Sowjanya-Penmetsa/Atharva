@@ -106,7 +106,7 @@ jobs:
           #images: ${{env.REGISTRY}}/${{ github.repository }}/${{env.DOCKER_IMAGE_NAME}}:${{ github.sha }}
           images: ${{env.REGISTRY}}/sowjanya-penmetsa/Atharva:${{ github.sha }}
 
-      - name: Azure logout
-        run: |
-          az logout
+     # - name: Azure logout
+       # run: |
+         # az logout
 
