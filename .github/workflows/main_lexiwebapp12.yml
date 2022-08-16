@@ -23,8 +23,10 @@ jobs:
       uses: docker/login-action@v1
       with:
         registry: https://ghcr.io/
-        username: ${{ secrets.USERNAME }}
-        password: ${{ secrets.PASSWORD }}
+        username: ${{ github.actor }}
+        password: ${{ secrets.GITHUB_TOKEN }}
+        #username: ${{ secrets.USERNAME }}
+        #password: ${{ secrets.PASSWORD }}
        # username: ${{ secrets.AzureAppService_ContainerUsername_bab9b65771c1456ca66e1fc82109faae }}
        # password: ${{ secrets.AzureAppService_ContainerPassword_a8e108a5baa84e9bb3a1467f78e91e60 }}
 
