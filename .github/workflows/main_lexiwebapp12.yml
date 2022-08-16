@@ -34,7 +34,7 @@ jobs:
       uses: docker/build-push-action@v2
       with:
         push: true
-        tags: ghcr.io/${{ github.actor }}/sowjanya-penmetsa/atharva:${{ github.sha }}
+        tags: ghcr.io/sowjanya-penmetsa/atharva:${{ github.sha }}
         file: ./Dockerfile
 
   deploy:
