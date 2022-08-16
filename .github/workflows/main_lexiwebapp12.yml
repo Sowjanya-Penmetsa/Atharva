@@ -52,4 +52,4 @@ jobs:
         app-name: 'lexiwebapp12'
         slot-name: 'production'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_809bcfda5f114cc1bdd8189258b43a4b }}
-        images: 'ghcr.io/${{ secrets.AzureAppService_ContainerUsername_bab9b65771c1456ca66e1fc82109faae }}/Sowjanya-Penmetsa/Atharva:${{ github.sha }}'
+        images: 'ghcr.io/sowjanya-penmetsa/atharva:${{ github.sha }}'
