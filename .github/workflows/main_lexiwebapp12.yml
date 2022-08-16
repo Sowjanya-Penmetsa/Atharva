@@ -34,7 +34,7 @@ jobs:
       uses: docker/build-push-action@v2
       with:
         push: true
-        tags: ghcr.io/${{ secrets.AzureAppService_ContainerUsername_bab9b65771c1456ca66e1fc82109faae }}/Sowjanya-Penmetsa/Atharva:${{ github.sha }}
+        tags: ghcr.io/${{ secrets.AzureAppService_ContainerUsername_bab9b65771c1456ca66e1fc82109faae }}/Sowjanya-Penmetsa/atharva:${{ github.sha }}
         file: ./Dockerfile
 
   deploy:
