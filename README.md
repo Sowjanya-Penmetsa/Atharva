@@ -1,5 +1,7 @@
 welcome_useragent.py file contains the code to display the welcome message.
+
 requirements.txt file contains all the requirements for the app.
+
 terraform folder contains the configuration file to create storage account to store the terraform state information and configuration file to create a web app in Azure
 Under workflow folder I have created three yml files info follows:
 storage.yml - Workflow to create a storage account in Azure on workflow dispatch event
