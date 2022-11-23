@@ -12,7 +12,7 @@ provider "azurerm" {
 }
 
 resource "azurerm_resource_group" "storage_rg" {
-  name     = "storage_rg"
+  name     = "storage_rg33"
   location = "northcentralus"
 }
 
