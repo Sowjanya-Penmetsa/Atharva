@@ -17,7 +17,7 @@ resource "azurerm_resource_group" "storage_rg" {
 }
 
 resource "azurerm_storage_account" "storage_acc_for_tfstate" {
-  name                     = "storageaccfortfstate"
+  name                     = "storageaccfortfstate33"
   resource_group_name      = azurerm_resource_group.storage_rg.name
   location                 = azurerm_resource_group.storage_rg.location
   account_tier             = "Standard"
